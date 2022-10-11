@@ -1,0 +1,1348 @@
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 900;
+    src: url("font/Gilroy-Bold.otf")
+}
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 200;
+    src: url("font/Gilroy-Light.otf")
+}
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 500;
+    src: url("font/Gilroy-Medium.otf")
+}
+@font-face{
+    font-family:"Gilroy";
+    font-weight: 700;
+    src: url("font/Gilroy-Regular.otf")
+}
+@font-face{
+    font-family:"Voyage";
+    font-weight: 900;
+    src: url("font/Voyage-Bold.ttf")
+}
+@font-face{
+    font-family:"Voyage";
+    font-weight: 600;
+    src: url("font/Voyage-Regular.ttf")
+}
+@font-face {
+    font-family: "Yoko Smile Regular";
+    font-weight: 500;
+    src: url("font/Yoko\ Smile\ Regular.otf");
+}
+@font-face {
+    font-family: "Magilio";
+    font-weight: 400;
+    src: url("font/Magilio.otf");
+}
+@font-face {
+    font-family: "Magilio";
+    font-weight: 400;
+    src: url("font/Magilio.ttf");
+}
+@font-face {
+    font-family: "Aloevera";
+    font-weight: 300;
+    src: url("font/Aloevera-OVoWO.ttf");
+}
+@font-face {
+    font-family: "Deranio";
+    font-weight: 300;
+    src: url("font/Deranio.ttf");
+}
+@font-face {
+    font-family: "GLITTEN ALL CAPS";
+    font-weight: 300;
+    src: url("font/GLITTEN\ ALL\ CAPS.ttf");
+}
+@font-face {
+    font-family: "LT Novelty";
+    font-weight: 400;
+    src: url("font/LT\ Novelty.otf");
+}
+@font-face {
+    font-family: "Glitten";
+    font-weight: 300;
+    src: url("font/Glitten-Regular.otf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    min-height: 100vh;
+    width: 100%;
+}
+.loader {
+    position: relative;
+    z-index: 999;
+    position: absolute;
+    /* top: -100%; */
+    width: 100%;
+    height: 100vh;
+    /* opacity: 0; */
+    background-color: rgb(0, 0, 0);
+}
+#tx01{
+    margin-top: 60px;
+    margin-left: 50px;
+    font-size: 4vw;
+    color: #fff;
+    font-family: Voyage;
+    font-weight: 400;
+}
+.container{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 10%;
+    height: 80vh;
+}
+.container h5{
+    text-align: center;
+    margin-bottom: 110px;
+    font-size: 50px;
+    color: #fff;
+    font-family: Gilroy;
+    font-weight: 300;
+    opacity: 0;
+}
+.textmove{
+    position: absolute;
+    z-index: 99;
+    height: 50px;
+    top: -20%;
+    left: -20px;
+    transform-origin:0% 100%;
+    transform: rotate(90deg);
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.textmove::-webkit-scrollbar{
+    display: none;
+}
+.textmove h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    word-spacing: 20px;
+    animation: mov 1s linear infinite;
+}
+@keyframes mov{
+    0%{
+        transform: translateX(-1%);
+    }
+}
+
+#main{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#part1{
+    position: relative;
+    width: 100%;
+    height: 180vh;
+    background-color: rgb(176, 175, 176);
+}
+#part1 .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 40px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90vw;
+    height: 90px;
+    border-bottom: 2px solid #000;
+}
+#part1 .nav .left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    height: 100%;
+}
+#part1 .nav h1{
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: Yoko Smile Regular;
+    opacity: 0;
+    margin-top: -35px;
+}
+#part1 .nav .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12vw;
+    height: 100%;
+}
+#part1 .nav h2{
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 300;
+    opacity: 0;
+    margin-top: -35px;
+}
+#part1 .nav .right i{
+    font-size: 2vw;
+    opacity: 0;
+    margin-top: -35px;
+}
+#part1 .nav h1:hover{
+    cursor: pointer;
+    text-shadow: -6px 2px 5px rgb(79, 79, 79);
+    transition: .8s all cubic-bezier(0.19, 1, 0.22, 1);
+}
+#part1 .nav i:hover{
+    cursor: pointer;
+    text-shadow: -6px 2px 5px rgb(79, 79, 79);
+    transition: .8s all cubic-bezier(0.19, 1, 0.22, 1);
+}
+#part1 .nav h2:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.859);
+    font-size: 1.2vw;
+    transition: .8s all cubic-bezier(0.19, 1, 0.22, 1);
+}
+#part1 #maintxt{
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%);
+    height: 40vh;
+    width: 90vw;
+}
+#part1 #maintxt h1{
+    font-size: 10vw;
+    line-height: 160px;
+    text-transform: uppercase;
+    font-family: Magilio;
+    font-weight: 400;
+    word-spacing: 200px;
+}
+#part1 #maintxt .txtbox{
+    position: absolute;
+    right: 40.5%;
+    top: 10px;
+    width: 10vw;
+    height: 15vh;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+    border-radius: 20px;
+    background-image: url(https://images.unsplash.com/photo-1536405528985-0ab8ba47f25e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNtb2tlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+}
+#part1 #maintxt .txtbox:hover{
+    cursor: pointer;
+    transition: 2s all cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    background-image: url(https://images.unsplash.com/photo-1512751165040-ec247781e62d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+    background-position: center;
+    background-size: cover;
+}
+#part1 #maintxt p{
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 25vw;
+    height: 15vh;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#part1 #stylebox{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 80vh;
+    opacity: 0;
+    width: 80vw;
+    height: 60vh;
+    border-radius: 250px;
+    background-color: rgba(195, 191, 191, 0.871);
+    box-shadow: 0 0 30px 0 #fff;
+}
+#part1 #stylebox .img{
+    width: 10vw;
+    height: 100%;
+}
+#part1 #stylebox .img img{
+    width: 55vw;
+    height: 90vh;
+    position: absolute;
+    top: -200px;
+}
+#part1 #stylebox .center{
+    position: relative;
+    width: 45vw;
+    height: 100%;
+}
+#part1 #stylebox .center h4{
+    font-size: 20px;
+    margin-top: 30px;
+    color: rgba(51, 50, 50, 0.666);
+}
+#part1 #stylebox .center h1{
+    font-size: 70px;
+    font-family: Aloevera;
+    font-weight: 300;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+#part1 #stylebox .center h2{
+    font-size: 42px;
+    font-family: sans-serif;
+    font-weight:300;
+    margin-top: 20px;
+}
+#part1 #stylebox .center h2 span{
+    position: absolute;
+    bottom: 33%;
+    left: 0;
+    font-size: 20px; 
+    font-family: sans-serif;
+    font-weight:300;
+    color: rgba(0, 0, 0, 0.445);
+}
+#part1 #stylebox .center .cart{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 30px;
+    width: 25vw;
+    height: 60px;
+}
+#part1 #stylebox .center .cart .left{
+    position: relative;
+    width: 7vw;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+#part1 #stylebox .center .cart .left h4{
+    position: absolute;
+    font-size: 25px;
+    left: 22px;
+    top: -15px;
+    color: #000;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+#part1 #stylebox .center .cart #cart1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Gilroy;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    width: 15vw;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+#part1 #btm{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 70px;
+    width: 80vw;
+    height: 25vh;
+}
+#part1 #btm .left{
+    width: 25vw;
+    height: 100%;
+}
+#part1 #btm .left h5{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+#part1 #btm .left p{
+    margin-top: 10px;
+    color: rgba(52, 51, 51, 0.812);
+    font-size: 18px;
+}
+#part1 #btm .right{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    height: 100%;
+}
+#part1 #btm .right h2{
+    position: relative;
+    font-size: 60px;
+    width: 8vw;
+    font-family: Deranio;
+}
+#part1 #btm .right h2 span{
+    font-size: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 0;
+    top: 12vh;
+}
+
+#part2{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    background-color: #57673dba;
+}
+#part2 #txt1{
+    position: relative;
+    position: absolute;
+    left: 48%;
+    transform: translate(-50%);
+    top: 15vh;
+    width: 90vw;
+    height: 35vh;
+    opacity: 0;
+}
+#part2 #txt1 .img{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    width: 26vw;
+    height: 15vh;
+    border-radius: 50px;
+    background-image: url(https://images.unsplash.com/photo-1487528699198-88d79d72479f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-position: center;
+    background-size: cover;
+}
+#part2 #txt2{
+    position: relative;
+    position: absolute;
+    left: 52%;
+    transform: translate(-50%);
+    top: 55vh;
+    width: 90vw;
+    height: 35vh;
+    opacity: 0;   
+}
+#part2 #txt2 h1{
+    word-spacing: 230px;
+}
+#part2 #xt1{
+    font-size: 140px;
+    line-height: 135px;
+    text-transform: uppercase;
+    font-family: Magilio;
+    font-weight: 400;
+}
+#part2 #txt2 .img{
+    position: absolute;
+    left: 29.5%;
+    top: 0px;
+    width: 14vw;
+    height: 15vh;
+    border-radius: 50px;
+    background-image: url(https://images.unsplash.com/photo-1492409678553-da87ed48ffee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-position: center;
+    background-size: cover;
+}
+#part2 #txt2 p{
+    position: absolute;
+    bottom: 25px;
+    width: 35vw;
+    left: 40%;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#part2 #stylebox1{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10vh;
+    width: 80vw;
+    height: 80vh;
+}
+#part2 #stylebox1 .left{
+    position: relative;
+    width: 35vw;
+    height: 100%;
+}
+#part2 #stylebox1 .left h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#part2 #stylebox1 .left p{
+    margin-top: 45px;
+    width: 31vw;
+    font-size: 25px;
+}
+#part2 #stylebox1 .left a{
+    position: absolute;
+    bottom: 60px;
+    color: #000;
+    font-size: 20px;
+}
+
+#part2 #stylebox1 .img{
+    width: 40vw;
+    height: 100%;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    background-image: url(https://images.unsplash.com/photo-1579165466741-7f35e4755660?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+}
+
+#part3{
+    position: relative;
+    width: 100%;
+    height: 130vh;
+    background-color: rgb(211, 222, 211);
+}
+#part3 #stylebox2{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15vh;
+    width: 90vw;
+    height: 95vh;
+}
+#part3 #stylebox2 .img{
+    position: relative;
+    width: 25vw;
+    height: 100%;
+}
+#part3 #stylebox2 .img img{
+    margin-top: -20%;
+    width: 35vw;
+    height: 120%;
+}
+#part3 #stylebox2 .right{
+    position: relative;
+    width: 60vw;
+    height: 100%;
+}
+#part3 #stylebox2 .right .top{
+    width: 80%;
+    height: 45vh;
+}
+#part3 #stylebox2 .right .top h1{
+    text-transform: uppercase;
+    font-size: 90px;
+    font-weight: 500;
+    font-family: GLITTEN ALL CAPS;
+}
+#part3 #stylebox2 .right .top p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Gilroy;
+    font-weight: 300;
+}
+#part3 #stylebox2 .right .btm{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    margin-top: -90px;
+}
+.anim{
+    opacity: 0;
+}
+#part3 #stylebox2 .right .btm .fst{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    border-left: 2px solid #000;
+}
+#part3 #stylebox2 .right .btm .snd{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    border-left: 2px solid #000;
+}
+#part3 #stylebox2 .right .btm .thrd{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    border-left: 2px solid #000;
+}
+#part3 #stylebox2 .right .btm .foth{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+#part3 #stylebox2 .right .btm img{
+    position: absolute;
+    bottom: 10px;
+    width: 15vw;
+    height: 20vh;
+}
+#part3 #stylebox2 .right .btm h2{
+    font-size: 27px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-family: Deranio;
+    font-weight: 300;
+}
+
+#part4{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(57, 116, 94, 0.485);
+}
+#part4 #txtbox{
+    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15vh;
+    width: 80vw;
+    height: 90vh;
+}
+#part4 #txtbox .top{
+    position: relative;
+    width: 20%;
+    height: 20vh;
+}
+#part4 #txtbox .top i{
+    font-size: 120px;
+    color: #60606087;
+}
+#part4 #txtbox .cnt{
+    position: relative;
+    width: 90%;
+    height: 35vh;
+}
+#part4 #txtbox .cnt p{
+    font-size: 70px;
+    font-family: Glitten;
+    font-weight: 300;
+    line-height: 80px;
+    opacity: 0;
+    margin-left: -40px;
+}
+#part4 #txtbox .btm{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25vh;
+}
+#part4 #txtbox .btm .left{
+    position: relative;
+    width: 25vw;
+    height: 100%;
+    opacity: 0;
+    margin-left: -40px;
+}
+#part4 #txtbox .btm .left .img{
+    width: 10vw;
+    height: 100%;
+    border-radius: 250px 250px 0 0 ;
+    background-image: url(https://images.unsplash.com/photo-1609505849320-29530bcb2d26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80);
+    background-position: top;
+    background-size: cover;
+}
+#part4 #txtbox .btm .left h2{
+    position: absolute;
+    font-size: 35px;
+    top: 20px;
+    right: 40px;
+    font-family: Voyage;
+    font-weight: 500;
+}
+#part4 #txtbox .btm .left h4{
+    position: absolute;
+    font-size: 20px;
+    bottom: 40px;
+    right: 40px;
+    font-family: Gilroy;
+    font-weight: 300;
+}
+#part4 #txtbox .btm .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 20vw;
+    height: 100%;
+}
+#part4 #txtbox .btm .right i{
+    font-size: 100px;
+}
+#part4 #txtbox .btm .right #ii1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #997954a0;
+}
+#part4 #txtbox .btm .right #ii1:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 3s all cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+#part4 #stylebox3{
+    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 15vh;
+    width: 80vw;
+    height: 65vh;
+}
+#part4 #stylebox3 h2{
+    font-size: 100px;
+    font-family: LT Novelty;
+    font-weight: 400;
+    opacity: 0;
+    margin-left: -100px;
+}
+#part4 #stylebox3 .left{
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 35vw;
+    height: 35vh;
+    border-radius: 250px;
+    background-color: rgba(182, 178, 129, 0.875);
+    left: -100px;
+    opacity: 0;
+}
+#part4 #stylebox3 .left img{
+    position: absolute;
+    bottom: -40%;
+    left: -5%;
+    height: 85vh;
+    width: 70%;
+}
+#part4 #stylebox3 .right{
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    display: flex;
+    width: 35vw;
+    height: 35vh;
+    border-radius: 250px;
+    background-color: rgba(182, 178, 129, 0.875);
+    opacity: 0;
+}
+#part4 #stylebox3 .right img{
+    position: absolute;
+    bottom: -30%;
+    left: -13%;
+    height: 70vh;
+    width: 80%;
+}
+
+#part4 #stylebox3 .txt{
+    position: absolute;
+    right: 0;
+    width: 18vw;
+    height: 100%;
+}
+#part4 #stylebox3 .txt h3{
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: Gilroy;
+    font-weight: 400;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#part4 #stylebox3 .txt h6{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: Gilroy;
+    font-weight: 400;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+#part5{
+    position: relative;
+    width: 100%;
+    height: 130vh;
+    background-color: rgb(31, 31, 31);
+}
+#part5 #txt1{
+    position: relative;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60vw;
+    height: 40vh;
+}
+#part5 #txt1 h1{
+    text-transform: uppercase;
+    font-size: 95px;
+    font-weight: 300;
+    letter-spacing: -3px;
+    color: rgba(255, 255, 255, 0.871);
+}
+#part5 #txt1 p{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: Gilroy;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.61);
+}
+#part5 #txt1 input{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 400px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+#part5 #txt1 input:hover{
+    cursor: pointer;
+    transition: .4s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    background: #b72c6c;
+    background: -webkit-linear-gradient(0deg, #b72c6c 0%, #058901 100%);
+    background: linear-gradient(0deg, #b72c6c 0%, #058901 100%);
+    color: #fff;
+}
+#part5 #txt2{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 8vh;
+    width: 90vw;
+    height: 50vh;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    opacity: 0;
+}
+#part5 #txt2 .left{
+    position: relative;
+    width: 30vw;
+    height: 100%;
+    margin-top: 90px;
+    opacity: 0;
+}
+#part5 #txt2 .left h1{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: Yoko Smile Regular;
+    color: #fff;
+}
+#part5 #txt2 .left h4{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 35px;
+    color: rgba(255, 255, 255, 0.738);
+}
+#part5 #txt2 .left .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 60%;
+    height: 50px;
+}
+#part5 #txt2 .left .icon i{
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.649);
+}
+#part5 #txt2 .left .icon i:hover{
+    cursor: pointer;
+    color: #fff;
+    transition: .5s;
+}
+#part5 #txt2 .right{
+    margin-top: 90px;
+    width: 40vw;
+    height: 100%;
+    opacity: 0;
+    
+}
+#part5 #txt2 .right h1{
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: rgba(218, 165, 32, 0.749);
+}
+#part5 #txt2 .right .txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+    width: 80%;
+    height: 50px;
+}
+#part5 #txt2 .right .txt h6{
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.738);
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+#part5 #txt2 .right .txt h6:hover{
+    cursor: pointer;
+    color: #fff;
+    transition: .6s all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    text-decoration: 2px solid rgb(73, 139, 187) underline;
+}
+#part5 #lst{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgba(255, 255, 255, 0.744);
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+@media (max-width:472px) {
+    #tx01{
+        margin-top: 60px;
+        margin-left: 20px;
+        font-size: 8vw
+    }
+    .container{
+        top: 15%;
+        width: 20%;
+    }
+    #part1{
+        height: 75vh;
+    }
+    #part1 .nav{
+        padding: 0 10px;
+        width: 100vw;
+        height: 60px;
+    }
+    #part1 .nav .right{
+        width: 19.5vw;
+    }
+    #part1 .nav h2{
+        font-size: 1vw;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 300;
+    }
+    #part1 .nav .right i{
+        font-size: 3.5vw;
+    }
+    #part1 .nav h2{
+        font-size: 2vw;
+    }
+    #part1 #maintxt h1{
+        position: absolute;
+        top: -15%;
+        font-size: 10vw;
+        line-height: 50px;
+        word-spacing: 70px;
+    }
+    #part1 #maintxt .txtbox{
+        right: 35.5%;
+        top: -50px;
+        width: 15vw;
+        height: 4vh;
+    }
+    #part1 #maintxt p{
+        right: 20px;
+        bottom: 60%;
+        width: 28vw;
+        font-size: 5px;
+    }
+    #part1 #stylebox{
+        top: 40vh;
+        width: 90vw;
+        height: 20vh;
+        border-radius: 100px;
+    }
+    #part1 #stylebox .img img{
+        width: 80%;
+        height: 30vh;
+        top: -100px;
+    }
+    #part1 #stylebox .center{
+        width: 55vw;
+    }
+    #part1 #stylebox .center h4{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    #part1 #stylebox .center h1{
+        font-size: 6vw;
+        margin-top: 10px;
+    }
+    #part1 #stylebox .center h2{
+        font-size: 3vw;
+        margin-top: 3px;
+    }
+    #part1 #stylebox .center h2 span{
+        bottom: 35%;
+        font-size: 2vw; 
+    }
+    #part1 #stylebox .center .cart{
+        bottom: 10%;
+        width: 30vw;
+        height: 20px;
+    }
+    #part1 #stylebox .center .cart .left{
+        width: 30%;
+    }
+    #part1 #stylebox .center .cart .left h4{
+        font-size: 10px;
+        left: 6px;
+        top: -6px;
+    }
+    #part1 #stylebox .center .cart #cart1{
+        font-size: 7px;
+    }
+    #part1 #btm{
+        bottom: 35px;
+        width: 90vw;
+        height: 10vh;
+    }
+    #part1 #btm .left{
+        width: 33vw;
+    }
+    #part1 #btm .left h5{
+        font-size: 11px;
+        font-weight: 600;
+    }
+    #part1 #btm .left p{
+        margin-top: 10px;
+        font-size: 7px;
+    }
+    #part1 #btm .right{
+        width: 45vw;
+    }
+    #part1 #btm .right h2{
+        font-size: 20px;
+        width: 10vw;
+    }
+    #part1 #btm .right h2 span{
+        font-size: 5px;
+        top: 40px;
+    }
+    #part2{
+        height: 65vh;
+    }
+    /* #part2{
+        height: 100vh;
+    } */
+    #part2 #txt1{
+        top: 50px;
+        height: 10vh;
+        left: 0;
+
+    }
+    #part2 #txt1 .img{
+        right: 0;
+        bottom: 5px;
+        width: 23vw;
+        height: 4vh;
+    }
+    #part2 #txt2{
+        top: 140px;
+        height: 10vh;
+        left: 15%;
+    }
+    #part2 #txt2 h1{
+        word-spacing: 55px;
+    }
+    #part2 #xt1{
+        font-size: 9.4vw;
+        line-height: 45px;
+    }
+    #part2 #txt2 .img{
+        left: 30%;
+        top: 5px;
+        width: 13.5vw;
+        height: 3vh;
+    }
+    #part2 #txt2 p{
+        bottom: 15px;
+        width: 37vw;
+        left: 45%;
+        font-size: 5px;
+    }
+    #part2 #stylebox1{
+        top: 35vh;
+        width: 90vw;
+        height: 22vh;
+    }
+    #part2 #stylebox1 .left{
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }
+    #part2 #stylebox1 .left h1{
+        font-size: 5vw;
+    }
+    #part2 #stylebox1 .left p{
+        margin-top: 25px;
+        width: 90%;
+        font-size: 8px;
+    }
+    #part2 #stylebox1 .left a{
+        bottom: 0px;
+        font-size: 10px;
+    }
+    #part2 #stylebox1 .img{
+        width: 50%;
+        height: 100%;
+        margin-right: 30px;
+    }
+    
+    #part3{
+        height: 100vh;
+    }
+    #part3 #stylebox2{
+        top: 10vh;
+        height: 30vh;
+    }
+    
+    #part3 #stylebox2 .img img{
+        margin-top: -60%;
+        height: 45vh;
+    }
+    #part3 #stylebox2 .right{
+        position: relative;
+        width: 55vw;
+        height: 100%;
+    }
+    #part3 #stylebox2 .right .top{
+        width: 100%;
+    }
+    #part3 #stylebox2 .right .top h1{
+        margin-top: 30px;
+        font-size: 6.8vw;
+    }
+    #part3 #stylebox2 .right .top p{
+        margin-top: 30px;
+        font-size: 13px;
+    }
+    #part3 #stylebox2 .right .btm{
+        bottom: -10%;
+        left: -60%;
+        width: 350px;
+        height: 25vh;
+    }
+    #part3 #stylebox2 .right .btm img{
+        margin-left: 10px;
+        width: 15vw;
+        height: 15vh;
+    }
+    #part3 #stylebox2 .right .btm h2{
+        font-size: 4vw;
+        margin-left: 10px;
+    }
+    
+    #part4{
+        height: 150vh
+    }
+    #part4 #txtbox{
+        top: 10vh;
+        width: 90vw;
+        height: 35vh;
+    }
+    #part4 #txtbox .top{
+        height: 20px;
+    }
+    #part4 #txtbox .top i{
+        font-size: 30px;
+    }
+    #part4 #txtbox .cnt{
+        margin-top: 20px;
+        width: 100%;
+        height: 15vh;
+    }
+    #part4 #txtbox .cnt p{
+        font-size: 5.9vw;
+        line-height: 40px;
+    }
+    #part4 #txtbox .btm{
+        bottom: 0;
+        height: 10vh;
+    }
+    #part4 #txtbox .btm .left{
+        width: 40vw;
+    }
+    #part4 #txtbox .btm .left .img{
+        width: 40%;
+    }
+    #part4 #txtbox .btm .left h2{
+        font-size: 4vw;
+        top: 10px;
+        right: 10px;
+        font-weight: 600;
+    }
+    #part4 #txtbox .btm .left h4{
+        position: absolute;
+        font-size: 2vw;
+        bottom: 20px;
+        right: 15px;
+    }
+    #part4 #txtbox .btm .right{
+        width: 35vw;
+    }
+    #part4 #txtbox .btm .right i{
+        font-size: 40px;
+    }
+    #part4 #txtbox .btm .right #ii1{
+        width: 85px;
+        height: 85px;
+    }
+    #part4 #stylebox3{
+        top: 55vh;
+        width: 90vw;
+        height: 45vh;
+    }
+    #part4 #stylebox3  h2{
+        font-size: 12vw;
+    }
+    #part4 #stylebox3 .left{
+        width: 100%;
+        height: 25vh;
+    }
+    #part4 #stylebox3 .left img{
+        position: absolute;
+        bottom: -40%;
+        left: -5%;
+        height: 65vh;
+        width: 70%;
+    }
+    #part4 #stylebox3 .right{
+        bottom: -90%;
+        width: 100%;
+        height: 25vh;
+    }
+    #part4 #stylebox3 .right img{
+        position: absolute;
+        bottom: -30%;
+        left: -13%;
+        height: 50vh;
+        width: 80%;
+    }
+    #part4 #stylebox3 .txt{
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+    }
+    #part4 #stylebox3 .txt h3{
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+    #part4 #stylebox3 .txt h6{
+        font-size: 25px;
+        font-weight: 300;
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+    #part5{
+        height: 100vh;
+    }
+    #part5 #txt1{
+        top: 15%;
+        left: 42%;
+        width: 80vw;
+        height: 18vh;
+    }
+    #part5 #txt1 h1{
+        font-size: 8.8vw;
+    }
+    #part5 #txt1 p{
+        font-size: 8px;
+    }
+    #part5 #txt1 input{
+        width: 200px;
+        height: 35px;
+        font-size: 10px;
+    }
+    #part5 #txt2{
+        top: 55vh;
+        height: 32vh;
+        left: 12%;
+    }
+    #part5 #txt2 .left{
+        width: 30vw;
+    }
+    #part5 #txt2 .left h1{
+        margin-left: 10px;
+        font-size: 6vw;
+    }
+    #part5 #txt2 .left h4{
+        margin-top: 25px;
+        margin-left: 10px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+    #part5 #txt2 .left .icon{
+        margin-left: 10px;
+        width: 120px;
+        height: 40px;
+    }
+    #part5 #txt2 .left .icon i{
+        font-size: 20px;
+    }
+    #part5 #txt2 .right{
+        width: 55%;
+    }
+    #part5 #txt2 .right h1{
+        font-size: 5.5vw;
+    }
+    #part5 #txt2 .right .txt{
+        margin-top: 75px;
+        width: 100%;
+    }
+    #part5 #txt2 .right .txt h6{
+        font-size: 3vw;
+    }
+    #part5 #lst{
+        width: 70%;
+        bottom: 50px;
+        font-size: 13px;
+    }
+    
+    .textmove{
+        display: none;
+    }
+    
+}
